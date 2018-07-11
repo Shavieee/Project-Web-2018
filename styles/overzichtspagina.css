@@ -1,0 +1,283 @@
+/*Bron: https://css-tricks.com/snippets/css/a-guide-to-flexbox/*/
+
+@font-face {
+    font-family: 'NexaBold';
+    src: url('webfont/nexa/NexaBold.otf')
+}
+
+@font-face {
+    font-family: 'NexaLight';
+    src: url('webfont/nexa/NexaLight.otf');
+}
+
+h1 {
+    margin-top: 1.2em;
+    margin-left: 0.75em;
+    margin-right: 0.75em;
+    margin-bottom: 1.2em;
+    font-family: "Nexabold";
+    font-size: 2em;
+    color: #22D570;
+}
+
+main {
+    border-top: 0.15em solid #22D570;
+    background-color: #F9FAFB;
+}
+
+section {
+    display: flex;
+    flex-wrap: wrap;
+    /* positionering verhaal blokken in het midden */
+    justify-content: center;
+    margin-bottom: 3em;
+}
+
+
+/* ======= MAIN ====== */
+
+
+/* text new stories */
+
+h2 {
+    font-family: "NexaBold";
+    font-size: 1.5em;
+    color: #EB386B;
+    text-align: center;
+    margin-bottom: 0em;
+}
+
+
+/* text sort */
+
+h3 {
+    font-family: "NexaBold";
+    font-size: 0.8em;
+    color: black;
+    text-align: center;
+}
+
+
+/* position sort */
+
+select {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    color: #EB386B;
+    background-color: #EB386B;
+}
+
+select,
+input[type=text] {
+    color: white;
+}
+
+
+/* ===== MAIN STORIES IN ARTICLE ======  */
+
+article {
+    margin-top: 1em;
+    margin-bottom: 1.3em;
+    background-color: white;
+    border-radius: 0.75em;
+    border: 0.05em solid #B6B6B6;
+    margin-left: 1em;
+    margin-right: 1em;
+    transition: all .5s ease-in-out;
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* Verhalen blok een transitie geven als je eroverheen hovert */
+
+article:hover {
+    transform: scale(1.02);
+    box-shadow: 0 0 1em grey;
+    box-shadow: 0 0 1em #999;
+}
+
+article h2 {
+    color: #37338E;
+}
+
+
+/* Positie blokjes datum en genre */
+
+article span {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    /* space will be distributed equally*/
+    flex-grow: 1;
+    margin: 0em;
+    padding: 0em;
+}
+
+article span h2 {
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+    margin: 0em;
+}
+
+
+/* Blokje datum */
+
+article span h2:nth-of-type(1) {
+    background: #37338E;
+    font-family: "nexaBold";
+    color: white;
+    font-size: 0.7em;
+    border-right: 1px solid white;
+    width: 50%;
+    align-items: flex-start;
+    padding: 1em;
+}
+
+
+/* Blokje genre */
+
+article span h2:nth-of-type(2) {
+    background: #37338E;
+    font-family: "nexaBold";
+    color: white;
+    font-size: 0.7em;
+    border-left: 1px solid white;
+    width: 50%;
+    align-items: flex-end;
+    padding: 1em;
+}
+
+article img {
+    width: 100%;
+}
+
+p {
+    padding-left: 0.6em;
+    padding-right: 0.6em;
+    font-family: 'NexaLight';
+    font-size: 0.8em;
+}
+
+
+/* opslaan */
+
+article span button {
+    color: darkblue;
+    margin: 1em;
+}
+
+
+/* ===== ANKER STYLEN ======== */
+
+footer {
+    display: block;
+    padding: 0.4em;
+    font-family: "NexaBold";
+    text-align: center;
+    background-color: var(--detail-color);
+    background-color: #EB386B;
+    border-radius: 0px 0px 10px 10px;
+}
+
+footer > a {
+    margin: 0;
+    padding: 0;
+    font-size: 100%;
+    color: white;
+    vertical-align: baseline;
+}
+
+
+/*====== BUTTON OPSLAAN VERHAAL =====*/
+
+button {
+    color: white;
+    background-color: #29129D;
+    font-family: 'NexaBold';
+    font-size: 0.8em;
+    padding: 0.5em;
+    border-radius: 1em;
+    margin-left: 0.5em;
+    margin-bottom: 0.5em;
+    width: 30%;
+}
+
+button:hover {
+    /*                color: white;*/
+    background-color: #29129D;
+    color: rgba(255, 255, 255, 0.4);
+    font-family: 'NexaBold';
+    font-size: 0.8em;
+    padding: 0.5em;
+    border-radius: 1em;
+    margin-right: 1.5em;
+    margin-bottom: 0.5em;
+}
+
+
+/* ====== ANIMATIE VAN BUTTON ======= */
+
+article.fade {
+    /*                transform: scale(1.5) rotate(-360deg) skew(5deg, -20deg);*/
+    opacity: 0.25;
+    transition: all 2s ease-in-out
+    /*                height: 40em;*/
+}
+
+
+/* ===== SCHALEN ===== */
+
+@media (min-width: 20em) {
+    section > article {
+        width: 70%;
+    }
+}
+
+@media (min-width: 25em) {
+    section > article {
+        width: 70%;
+    }
+}
+
+@media (min-width: 29em) {
+    section > article {
+        width: 55%;
+    }
+    h1 {
+        text-align: center;
+    }
+}
+
+@media (min-width: 35em) {
+    section > article {
+        width: 40%;
+    }
+}
+
+@media (min-width: 41em) {
+    section > article {
+        width: 35%;
+    }
+}
+
+@media (min-width: 50em) {
+    section > article {
+        width: 28%;
+    }
+}
+
+@media (min-width: 56em) {
+    section > article {
+        width: 29%;
+    }
+}
+
+@media (min-width: 75em) {
+    section > article {
+        width: 25%;
+    }
+}

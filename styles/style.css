@@ -1,0 +1,386 @@
+========================================================BROWSER RESET - gebaseerd op html5 doctor css reset http: //html5doctor.com/html-5-reset-stylesheet
+========================================================*/ html,
+body,
+div,
+span,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+abbr,
+address,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+samp,
+small,
+strong,
+sub,
+sup,
+var,
+b,
+i,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    vertical-align: baseline;
+    background: transparent
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+menu,
+nav,
+section {
+    display: block
+}
+
+nav ul {
+    list-style: none
+}
+
+ul {
+    margin-left: 1.1em;
+}
+
+a {
+    margin: 0;
+    padding: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    background: transparent
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0
+}
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0
+}
+
+input,
+select {
+    vertical-align: middle
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+
+/*     EINDE BROWSER RESET */
+
+
+/* ==================================
+    Variables
+====================================*/
+
+.nav,
+.banner,
+.story_nav {
+    padding: 30px;
+}
+
+.story {
+    margin: 30px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+p .title {
+    font-family: 'NexaBold', 'Arial';
+}
+
+html,
+body {
+    margin: 0px;
+    padding: 0px;
+    font-family: "NexaBold" --main-color: #45ba71;
+    --detail-color: #ee336a;
+    --content-color: #362f90;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid var(--main-color);
+}
+
+.nav__item {
+    display: inline-block;
+}
+
+.nav__item--spacer {
+    margin: 0px 8px;
+}
+
+.banner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid var(--main-color);
+}
+
+.banner__title {
+    color: var(--main-color);
+    font-size: 3em;
+    color: #22D570;
+}
+
+
+/* ==================================
+    Story
+====================================*/
+
+.story_wrapper {
+    background-color: #efefef;
+}
+
+.story_nav {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 0px;
+}
+
+.story_nav__title {
+    color: var(--detail-color);
+    margin-right: 8px;
+}
+
+.story_nav__sorting {
+    display: flex;
+    align-items: center;
+}
+
+.story_nav__sorting select {
+    background-color: white;
+    border: 1px solid var(--detail-color);
+    font-size: 1em;
+}
+
+.story {
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 12px;
+    transition: 0.3s;
+}
+
+.story:hover {
+    box-shadow: 0px 2px 26px -1px black;
+    margin: 25px;
+}
+
+.story__title {
+    text-align: center;
+    color: var(--content-color);
+    margin-bottom: 0px;
+}
+
+.story__rating {
+    text-align: center;
+    font-size: 2em;
+    unicode-bidi: bidi-override;
+    direction: rtl;
+}
+
+.star:before {
+    content: "\2606";
+}
+
+.story__rating > .star.active:before,
+.story__rating > .star.active ~ .star:before {
+    content: "\2605";
+    color: orange;
+}
+
+.story__rating > .star:hover:before,
+.story__rating > .star:hover ~ .star:before {
+    content: "\2605";
+}
+
+.story__image {
+    width: 100%;
+}
+
+.story__info {
+    display: flex;
+}
+
+.story__description {
+    font-family: "NexaLight";
+    display: -webkit-box;
+    padding: 0px 12px;
+    margin: 0 auto;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.story__save {
+    font-family: "NexaBold";
+    display: inline-block;
+    margin: 8px 12px;
+    color: var(--content-color);
+    font-weight: bold;
+}
+
+.story__save button {
+    background-color: var(--content-color);
+    color: white;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    font-size: 40px;
+    vertical-align: middle;
+    line-height: 0px;
+    margin-left: 4px;
+}
+
+.info__datum,
+.info__genre {
+    flex-basis: 50%;
+    text-align: center;
+    font-family: "Nexabold";
+    background-color: var(--content-color);
+    color: white;
+    padding: 4px 0px;
+}
+
+.info__datum {
+    font-family: "NexaBold";
+    border-right: 1px solid white;
+}
+
+.story__read {
+    display: block;
+    padding: 12px 16px;
+    font-family: "NexaBold";
+    text-align: center;
+    background-color: var(--detail-color);
+    color: white;
+    border-radius: 0px 0px 10px 10px;
+}
+
+#modal-wrapper {
+    position: fixed;
+    top: 0px;
+    bottom: 0px;
+    right: 0px;
+    left: 0px;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+#modal {
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    width: 600px;
+    height: 400px;
+    max-width: 100%;
+    max-height: 100%;
+    background-color: white;
+    border-radius: 8px;
+    padding: 16px 32px;
+    transform: translate(-50%, -50%);
+}
+
+.hidden {
+    display: none;
+}
+
+.right_align {
+    text-align: right;
+}
+
+
+/* grid */
+
+.row {
+    display: flex;
+    flex-wrap: wrap
+}
+
+.col-mobile-12 {
+    flex-basis: 100%;
+}
+
+@media (min-width: 40em) {
+    .col-tablet-6 {
+        flex-basis: 50%;
+    }
+}
+
+@media (min-width: 70em) {
+    .col-desktop-4 {
+        flex-basis: calc(100% / 12 * 4);
+    }
+}

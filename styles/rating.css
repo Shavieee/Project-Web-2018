@@ -1,0 +1,41 @@
+.storyRating {
+    display: flex;
+/*    margin: auto;*/
+    align-items: center;
+    padding: 0;
+    margin-right:0.4em;
+    flex-grow: 1;
+}
+
+.storyRating {
+    text-align: center;
+    font-size: 2em;
+    unicode-bidi: bidi-override;
+    direction: rtl;
+}
+
+.star:before {
+    content: "\2606";
+    color:#FCDC47;
+}
+
+.storyRating > .star.active:before,
+.storyRating > .star.active ~ .star:before {
+    content: "\2605";
+    color: #F6D542;
+}
+
+.storyRating > .star:hover:before,
+.storyRating > .star:hover ~ .star:before {
+    content: "\2605";
+}
+
+@media (min-width:60em) {
+    .storyRating {
+        display: flex;
+        margin-right: 0.5em;
+        margin-left: -0.3em;
+        padding: 0;
+        flex-grow: 1;
+    }
+}

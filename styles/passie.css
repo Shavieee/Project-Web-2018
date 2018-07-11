@@ -1,0 +1,53 @@
+            @font-face {
+                font-family: 'shatterboxx';
+                src: url('webfont/SHATTERB.ttf');
+            }
+
+            body {
+                font-family: 'shatterboxx', 'helvetica';
+                color: white;
+                text-align: center;
+                margin-right: 2em;
+                margin-left: 2em;
+                background-image: url(../images/passie/shattered.jpg);
+                background-repeat: no-repeat;
+                background-attachment: fixed;
+                background-position: center;
+            }
+
+            h1 {
+                font-size: 5em;
+            }
+
+            p {
+                font-size: 3em;
+            }
+
+            @media (min-width:27em) {
+                body {
+                    margin-left: 3em;
+                    margin-right: 3em;
+                    text-align: center
+                }
+            }
+
+            @media (min-width:40em) {
+                body {
+                    margin-left: 7em;
+                    margin-right: 7em;
+                }
+            }
+
+            @media (min-width:65em) {
+                body {
+                    margin-left: 17em;
+                    margin-right: 17em;
+                }
+            }
+
+            @media (min-width:75em) {
+                body {
+                    margin-left: 16em;
+                    margin-right: 16em;
+                }
+            }

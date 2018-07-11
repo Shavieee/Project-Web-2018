@@ -1,0 +1,74 @@
+/* klein */
+
+body {
+    background-image: url(../images/Verliefd/clouds%20background.png);
+}
+
+html,
+body,
+.lovebackground {
+    min-width: 100%;
+    min-height: 100%;
+}
+
+.lovebackground {
+    background-image: url("../images/Verliefd/lovemobile-01.png");
+    background-repeat: no-repeat;
+    background-size: auto 100%;
+}
+
+.mobile-only {
+    display: block;
+}
+
+.tablet-only {
+    display: none;
+}
+
+.desktop-only {
+    display: none;
+}
+
+@media(min-width:27em) {
+    .lovebackground {
+        background-image: url("../images/Verliefd/lovemobile-01.png");
+    }
+    .mobile-only {
+        display: block;
+    }
+    .tablet-only {
+        display: none;
+    }
+    .desktop-only {
+        display: none;
+    }
+}
+
+@media(min-width:40em) {
+    .lovebackground {
+        background-image: url("../images/Verliefd/lovetablet-01.png");
+    }
+    .tablet-only: {
+        display: block;
+    }
+
+    .mobile-only {
+        display: none;
+    }
+
+    .desktop-only {
+        display: none;
+    }
+}
+
+@media(min-width:60em) {
+    .lovebackground {
+        background-image: url("../images/Verliefd/lovedesktop-01.png");
+    }
+    .desktop-only {
+        display: block;
+    }
+    .tablet-only: {
+        display: none;
+    }
+}

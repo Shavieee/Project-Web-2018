@@ -1,0 +1,26 @@
+@font-face {
+    font-family: "DSFetteThannhaeuser";
+    src: url('webfont/ds-fettethannhaeuser.ttf');
+}
+
+html,
+body {
+    font-family: "DSFetteThannhaeuser", 'helvetica';
+    text-align: center;
+    background-image: url(../images/vrijdag/old.jpg);
+/*    background-size: auto 100;*/
+}
+
+section{
+margin-left:4em;
+margin-right:4em;
+}
+
+h1 {
+    font-size: 5em;
+    color: red;
+}
+
+p {
+    font-size: 3em;
+}
